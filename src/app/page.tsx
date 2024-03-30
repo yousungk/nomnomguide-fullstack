@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { The_Girl_Next_Door } from "next/font/google";
 import { Poppins } from "next/font/google";
 import Head from "next/head";

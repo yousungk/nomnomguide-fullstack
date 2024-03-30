@@ -5,6 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
+import Link from "next/link";
 
 const door = The_Girl_Next_Door({
   weight: "400",
@@ -109,46 +110,54 @@ export default async function RestaurantGuide() {
           </div>
           <div>
             {data.map((restaurant: Restaurant, index: number) => (
-              <div key={index} className="p-6">
-                <div className="flex flex-row bg-white w-2/3 h-54 px-8 py-6 rounded-lg shadow-lg">
-                  <Image
-                    src={"/" + restaurant.restaurant_name + ".jpeg"}
-                    alt="Picture of restaurant"
-                    width={150}
-                    height={150}
-                    className="rounded-lg"
-                    style={{
-                      maxHeight: "150px",
-                      maxWidth: "150px",
-                      minWidth: "150px",
-                      minHeight: "150px",
-                      objectFit: "cover", // Add object-fit property
-                    }}
-                  />
-                  <div
-                    className={classNames(
-                      "flex flex-col pl-5 text-gray-600",
-                      poppins.className
-                    )}
-                  >
-                    <div className="font-bold text-lg">
-                      {restaurant.restaurant_name}
-                    </div>
-                    <div className="py-3 text-sm">
-                      {restaurant.restaurant_address}
-                    </div>
-                    <div className="py-3 text-sm">{restaurant.description}</div>
-                    <div className="flex flex-row">
-                      <div className="text-lg">
-                        {restaurant.rating} out of 5{" "}
+              <div className="pl-6">
+                <Link
+                  key={index}
+                  className="p-6"
+                  href={`/booking/${restaurant.restaurant_name}`}
+                >
+                  <div className="flex flex-row bg-white w-2/3 h-54 px-8 py-6 rounded-lg shadow-lg">
+                    <Image
+                      src={"/" + restaurant.restaurant_name + ".jpeg"}
+                      alt="Picture of restaurant"
+                      width={150}
+                      height={150}
+                      className="rounded-lg"
+                      style={{
+                        maxHeight: "150px",
+                        maxWidth: "150px",
+                        minWidth: "150px",
+                        minHeight: "150px",
+                        objectFit: "cover", // Add object-fit property
+                      }}
+                    />
+                    <div
+                      className={classNames(
+                        "flex flex-col pl-5 text-gray-600",
+                        poppins.className
+                      )}
+                    >
+                      <div className="font-bold text-lg">
+                        {restaurant.restaurant_name}
                       </div>
-                      <span className="material-symbols-outlined">star</span>
-                      <div className="px-5 underline text-lg">
-                        {restaurant.review_count} Google reviews
+                      <div className="py-3 text-sm">
+                        {restaurant.restaurant_address}
+                      </div>
+                      <div className="py-3 text-sm">
+                        {restaurant.description}
+                      </div>
+                      <div className="flex flex-row">
+                        <div className="text-lg">
+                          {restaurant.rating} out of 5{" "}
+                        </div>
+                        <span className="material-symbols-outlined">star</span>
+                        <div className="px-5 underline text-lg">
+                          {restaurant.review_count} Google reviews
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

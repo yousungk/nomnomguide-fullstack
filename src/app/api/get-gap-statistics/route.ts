@@ -13,7 +13,9 @@ export async function GET(request: NextRequest) {
   });
   const searchParams = request.nextUrl.searchParams;
   const param = searchParams.get("restaurant_name");
-  const restaurant_name = param ? param : "Kalaya";
+  const restaurant_name = param
+    ? decodeURIComponent(param).replace("'", "''")
+    : "Kalaya";
 
   const restaurants = await db.all(
     "WITH temp AS ( " +

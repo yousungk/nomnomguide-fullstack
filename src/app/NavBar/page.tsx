@@ -37,7 +37,7 @@ function NavBar() {
                 </li>
                 <li>
                   <Link
-                    href="/booking"
+                    href="/booking/mawn"
                     className="text-neutral-700 hover:bg-amber-300 hover:text-white hover:no-underline rounded-md p-2 text-sm"
                   >
                     Booking Guide

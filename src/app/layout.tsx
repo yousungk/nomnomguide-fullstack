@@ -1,3 +1,4 @@
+// import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRoute";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,12 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/* //<AppRouterCacheProvider> */}
         <div className="flex flex-row">
           <NavBar />
           <div>{children}</div>
         </div>
         <Footer />
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        {/* </AppRouterCacheProvider> */}
       </body>
     </html>
   );
