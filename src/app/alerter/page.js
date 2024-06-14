@@ -16,7 +16,7 @@ function alerter() {
           <div className="pb-2 text-sm font-bold">Restaurant Name</div>
           <details className="dropdown">
             <summary className="btn bg-white text-black hover:bg-gray-100 font-normal border border-gray-300 shadow-md">
-              Little Nonna's
+              Little Nonna&apos;s
               <svg
                 className="w-2.5 h-2.5 ms-3"
                 aria-hidden="true"

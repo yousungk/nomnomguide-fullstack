@@ -26,7 +26,6 @@ export default function RootLayout({
           <div>{children}</div>
         </div>
         <Footer />
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         {/* </AppRouterCacheProvider> */}
       </body>
     </html>

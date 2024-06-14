@@ -110,9 +110,8 @@ export default async function RestaurantGuide() {
           </div>
           <div>
             {data.map((restaurant: Restaurant, index: number) => (
-              <div className="pl-6">
+              <div className="pl-6" key={index}>
                 <Link
-                  key={index}
                   className="p-6"
                   href={`/booking/${restaurant.restaurant_name}`}
                 >
