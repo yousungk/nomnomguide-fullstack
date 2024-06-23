@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* //<AppRouterCacheProvider> */}
-        <div className="flex flex-row">
+        <div className="flex flex-row min-h-screen">
           <NavBar />
           <div>{children}</div>
         </div>

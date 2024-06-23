@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 function NavBar() {
   return (
-    <div className="flex top-0 left-0 w-64 bg-white pr-4">
+    <div className="flex top-0 left-0 w-64 bg-slate-400 pr-4">
       <div className="flex flex-row">
         <div className="bg-black w-8"></div>
         <div>
@@ -30,23 +30,23 @@ function NavBar() {
                 <li>
                   <Link
                     href="/"
-                    className="text-neutral-700 hover:bg-amber-300 hover:text-white hover:no-underline rounded-md p-2 text-sm"
+                    className="text-white hover:bg-black hover:text-white hover:no-underline rounded-md p-2 text-sm"
                   >
                     About Website
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/booking/mawn"
                     className="text-neutral-700 hover:bg-amber-300 hover:text-white hover:no-underline rounded-md p-2 text-sm"
                   >
                     Booking Guide
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/restaurant"
-                    className="text-neutral-700 hover:bg-amber-300 hover:text-white hover:no-underline rounded-md p-2 text-sm"
+                    className="text-white hover:bg-black hover:text-white hover:no-underline rounded-md p-2 text-sm"
                   >
                     Restaurant Guide
                   </Link>

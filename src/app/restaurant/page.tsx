@@ -55,13 +55,8 @@ export default async function RestaurantGuide() {
       <Head>
         <title>Restaurant Recomendation Guide</title>
       </Head>
-      <div className="bg-slate-100 w-screen pb-10">
+      <div className="bg-white w-screen pb-10">
         <div className="flex flex-col">
-          <div className={door.className}>
-            <div className="bg-white top-0 w-screen h-20 p-7 text-2xl">
-              Restaurant Guide
-            </div>
-          </div>
           <div
             className={classNames(
               "flex md:flex-row gap-x-5 p-6 flex-col",
@@ -102,10 +97,15 @@ export default async function RestaurantGuide() {
             </div> */}
           </div>
           <div className="px-6 pb-6">
-            <div className="flex flex-col bg-white w-2/3 h-54 px-8 py-6 rounded-lg shadow-lg">
-              Personally curated list of recommended restaurants, created using
-              input from locals.
-              <p className="italic pt-1">Updated as of March 2024.</p>
+            <div className="flex flex-col bg-white w-2/3 h-54 px-8 pt-6">
+              <div className={door.className}>
+                <div className="text-2xl">Restaurant Guide</div>
+              </div>
+              <div className="py-2 italic text-md">
+                Locally curated list of restaurants, selected by locals and
+                foodies, presented to you by NomNomGuide.
+              </div>
+              <p className="italic text-sm">Updated as of March 2024.</p>
             </div>
           </div>
           <div>
@@ -115,7 +115,7 @@ export default async function RestaurantGuide() {
                   className="p-6"
                   href={`/booking/${restaurant.restaurant_name}`}
                 >
-                  <div className="flex flex-row bg-white w-2/3 h-54 px-8 py-6 rounded-lg shadow-lg">
+                  <div className="flex flex-row w-2/3 h-54 px-8 py-3">
                     <Image
                       src={"/" + restaurant.restaurant_name + ".jpeg"}
                       alt="Picture of restaurant"
@@ -132,7 +132,7 @@ export default async function RestaurantGuide() {
                     />
                     <div
                       className={classNames(
-                        "flex flex-col pl-5 text-gray-600",
+                        "flex flex-col pl-5 text-black",
                         poppins.className
                       )}
                     >
@@ -146,11 +146,10 @@ export default async function RestaurantGuide() {
                         {restaurant.description}
                       </div>
                       <div className="flex flex-row">
-                        <div className="text-lg">
-                          {restaurant.rating} out of 5{" "}
+                        <div className="text-sm">
+                          {restaurant.rating} out of 5 rating{" "}
                         </div>
-                        <span className="material-symbols-outlined">star</span>
-                        <div className="px-5 underline text-lg">
+                        <div className="px-5 underline text-sm">
                           {restaurant.review_count} Google reviews
                         </div>
                       </div>
